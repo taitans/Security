@@ -1,1 +1,1 @@
-Build: [![Build status](https://ci.appveyor.com/api/projects/status/k97s1oxum1lga8i0?svg=true)](https://ci.appveyor.com/project/xielongjiang/security)
+[![Build status](https://ci.appveyor.com/api/projects/status/m46qdo22qbu62hbu/branch/master?svg=true)](https://ci.appveyor.com/project/xielongjiang/security/branch/master)
