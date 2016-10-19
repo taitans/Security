@@ -1,0 +1,13 @@
+branches:
+  only:
+  - master
+skip_tags: true
+configuration: Release
+before_build:
+- cmd: >-
+    dotnet restore
+
+    nuget restore
+build:
+  verbosity: minimal
+test: off

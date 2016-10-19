@@ -1,0 +1,1 @@
+Build: [![Build status](https://ci.appveyor.com/api/projects/status/k97s1oxum1lga8i0?svg=true)](https://ci.appveyor.com/project/xielongjiang/security)
