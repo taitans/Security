@@ -18,8 +18,7 @@ When you need to deploy in Mono environment, will have a more serious error
 ### Part of the code (部分代码)
 
 `  
-//The code to solve you in Mono environment,could not load type "Microsoft.Owin.Security.DataProtection.DpapiDataProtector"
-app.UseAesDataProtectionProvider("your name"); //your host.AppName
+app.UseAesDataProtectionProvider("your name"); 
 
 var issuer = "http://localhost:8888";
 string audienceId = ConfigurationManager.AppSettings["as:AudienceId"];
