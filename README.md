@@ -3,7 +3,7 @@ Taitans Security
 
 Build:[![Build status](https://ci.appveyor.com/api/projects/status/m46qdo22qbu62hbu/branch/master?svg=true)](https://ci.appveyor.com/project/xielongjiang/security/branch/master)
 
-## Instructions (说明)
+## Instructions 
 
 When you use OWIN middleware using Json Web Token deployment in Mono environment, it will be a serious mistake  `Could not load type "Microsoft.Owin.Security.DataProtection.DpapiDataProtector"`
 
@@ -15,7 +15,7 @@ The project to solve when you are in the use of `UseJwtBearerAuthentication` wil
 
 When you need to deploy in Mono environment, will have a more serious error
 
-### Part of the code (部分代码)
+### Part of the code
 
 `  
 app.UseAesDataProtectionProvider("your name"); 
