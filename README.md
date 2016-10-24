@@ -3,6 +3,12 @@ Taitans Security
 
 Build:[![Build status](https://ci.appveyor.com/api/projects/status/m46qdo22qbu62hbu/branch/master?svg=true)](https://ci.appveyor.com/project/xielongjiang/security/branch/master)
 
+## Change Logs  
+
+### 2016-10-24 
+
+* Add the `Taitans.Owin.Security.QQ` project 
+
 ## Instructions 
 
 When you use OWIN middleware using Json Web Token deployment in Mono environment, it will be a serious mistake  `Could not load type "Microsoft.Owin.Security.DataProtection.DpapiDataProtector"`
@@ -15,14 +21,22 @@ The project to solve when you are in the use of `UseJwtBearerAuthentication` wil
 
 When you need to deploy in Mono environment, will have a more serious error
 
-### Part of the code
+## Part of the code
 
-`  
+### Security
+
+```net
+//This allows you to program deployed in mono
 app.UseAesDataProtectionProvider("your name"); 
 
+
+
 var issuer = "http://localhost:8888";
+
 string audienceId = ConfigurationManager.AppSettings["as:AudienceId"];
+
 string symmetricKeyAsBase64 = ConfigurationManager.AppSettings["as:AudienceSecret"];
+
 byte[] audienceSecret = System.Text.Encoding.ASCII.GetBytes(symmetricKeyAsBase64);
 
 var securityKey = new SymmetricSecurityKey(audienceSecret);
@@ -33,4 +47,15 @@ TokenValidationParameters validationParameters = new TokenValidationParameters
    ValidAudience = audienceId,
    ValidIssuer = issuer
 };
- app.UseJwtBearerAuthentication(issuer, audienceId, symmetricKeyAsBase64, validationParameters);`
+app.UseJwtBearerAuthentication(issuer, audienceId, symmetricKeyAsBase64, validationParameters);
+```
+
+### QQ Connect
+
+```net
+ app.UseQQAuthentication(new QQOAuth2AuthenticationOptions
+ {
+   ClientId = "your appId",
+   ClientSecret = "your appKey"
+ });
+```
