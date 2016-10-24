@@ -85,7 +85,7 @@ namespace Taitans.Owin.Security.QQ
         /// <summary>
         /// The request path within the application's base path where the user-agent will be returned.
         /// The middleware will process this request when it arrives.
-        /// Default value is "/signin-QQ".
+        /// Default value is "/signin-qq".
         /// </summary>
         public PathString CallbackPath
         {
@@ -144,7 +144,7 @@ namespace Taitans.Owin.Security.QQ
         public QQOAuth2AuthenticationOptions() : base("QQ")
         {
             this.Caption = "QQ";
-            this.CallbackPath = new PathString("/signinQQ");
+            this.CallbackPath = new PathString("/signin-qq");
             base.AuthenticationMode = AuthenticationMode.Passive;
             this.Scope = new List<string>();
             this.BackchannelTimeout = TimeSpan.FromSeconds(60.0);
