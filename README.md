@@ -5,6 +5,12 @@ Build:[![Build status](https://ci.appveyor.com/api/projects/status/m46qdo22qbu62
 
 ## Change Logs  
 
+### 2018-04-08 
+
+* Update Taitans.Owin.Security.Aes project depend on the package for reference. 
+* Update Taitans.Owin.Security.Jwt project depend on the package for reference. 
+* Update Taitans.Owin.Security.QQ project depend on the package for reference. 
+
 ### 2016-10-24 
 
 * Add the `Taitans.Owin.Security.QQ` project 
